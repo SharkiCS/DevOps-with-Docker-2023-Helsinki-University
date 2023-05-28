@@ -1,0 +1,38 @@
+Last login: Sun May 28 23:13:36 on ttys002 
+╭─ ~ ▓▒░··········································································································································░▒▓ ✔  at 11:14:16 PM ─╮ 
+╰─ docker ps -a                                                                                                                                                            ─╯ 
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES 
+ 
+╭─ ~ ▓▒░··········································································································································░▒▓ ✔  at 11:14:24 PM ─╮ 
+╰─ docker container run -d rabbitmq                                                                                                                                        ─╯ 
+b98b7878b961597b0bbaadddad472daa64646cf5f3c0dae188fd6a65f94e19c5 
+ 
+╭─ ~ ▓▒░··········································································································································░▒▓ ✔  at 11:14:30 PM ─╮ 
+╰─ docker container run -d mongo                                                                                                                                           ─╯ 
+c2e1cd0a9fc1c59dd5eafb1bbebba790d3c042114ecd584f5b284e76e1334d0f 
+ 
+╭─ ~ ▓▒░··········································································································································░▒▓ ✔  at 11:14:33 PM ─╮ 
+╰─ docker container run -d redis                                                                                                                                           ─╯ 
+1b5206c3b3be6aac87fa63cfda27508ef4947600448fad30167e3c2b35f3f0cd 
+ 
+╭─ ~ ▓▒░··········································································································································░▒▓ ✔  at 11:14:39 PM ─╮ 
+╰─ docker ps -a                                                                                                                                                            ─╯ 
+CONTAINER ID   IMAGE      COMMAND                  CREATED          STATUS          PORTS                                                 NAMES 
+1b5206c3b3be   redis      "docker-entrypoint.s…"   3 seconds ago    Up 2 seconds    6379/tcp                                              nice_stonebraker 
+c2e1cd0a9fc1   mongo      "docker-entrypoint.s…"   9 seconds ago    Up 8 seconds    27017/tcp                                             crazy_liskov 
+b98b7878b961   rabbitmq   "docker-entrypoint.s…"   12 seconds ago   Up 11 seconds   4369/tcp, 5671-5672/tcp, 15691-15692/tcp, 25672/tcp   eloquent_vaughan 
+ 
+╭─ ~ ▓▒░··········································································································································░▒▓ ✔  at 11:14:42 PM ─╮ 
+╰─ docker container stop 1b c2                                                                                                                                             ─╯ 
+1b 
+c2 
+ 
+╭─ ~ ▓▒░··········································································································································░▒▓ ✔  at 11:14:55 PM ─╮ 
+╰─ docker ps -a                                                                                                                                                            ─╯ 
+CONTAINER ID   IMAGE      COMMAND                  CREATED          STATUS                    PORTS                                                 NAMES 
+1b5206c3b3be   redis      "docker-entrypoint.s…"   18 seconds ago   Exited (0) 1 second ago                                                         nice_stonebraker 
+c2e1cd0a9fc1   mongo      "docker-entrypoint.s…"   24 seconds ago   Exited (0) 1 second ago                                                         crazy_liskov 
+b98b7878b961   rabbitmq   "docker-entrypoint.s…"   27 seconds ago   Up 27 seconds             4369/tcp, 5671-5672/tcp, 15691-15692/tcp, 25672/tcp   eloquent_vaughan 
+ 
+╭─ ~ ▓▒░··········································································································································░▒▓ ✔  at 11:14:57 PM ─╮ 
+╰─                                                                                                                                                                         ─╯ 

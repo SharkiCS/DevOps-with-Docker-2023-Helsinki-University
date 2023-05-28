@@ -1,0 +1,6 @@
+╭─ ~ ▓▒░··········································································································································░▒▓ ✔  at 11:14:55 PM ─╮ 
+╰─ docker ps -a                                                                                                                                                            ─╯ 
+CONTAINER ID   IMAGE      COMMAND                  CREATED          STATUS                    PORTS                                                 NAMES 
+1b5206c3b3be   redis      "docker-entrypoint.s…"   18 seconds ago   Exited (0) 1 second ago                                                         nice_stonebraker 
+c2e1cd0a9fc1   mongo      "docker-entrypoint.s…"   24 seconds ago   Exited (0) 1 second ago                                                         crazy_liskov 
+b98b7878b961   rabbitmq   "docker-entrypoint.s…"   27 seconds ago   Up 27 seconds             4369/tcp, 5671-5672/tcp, 15691-15692/tcp, 25672/tcp   eloquent_vaughan
