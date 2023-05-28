@@ -1,0 +1,115 @@
+Last login: Sun May 28 23:58:50 on ttys003 
+╭─ ~ ▓▒░·········································································································································░▒▓ ✔  at 11:59:07 PM ─╮ 
+╰─ docker ps -as                                                                                                                                                          ─╯ 
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS                     PORTS     NAMES               SIZE 
+0d0c75dbb9b5   redis     "docker-entrypoint.s…"   4 minutes ago   Exited (1) 4 minutes ago             ecstatic_rosalind   0B (virtual 111MB) 
+b7f7acfa690f   mongo     "docker-entrypoint.s…"   4 minutes ago   Exited (0) 4 minutes ago             reverent_volhard    0B (virtual 624MB) 
+ 
+╭─ ~ ▓▒░·········································································································································░▒▓ ✔  at 11:59:13 PM ─╮ 
+╰─ docker images                                                                                                                                                          ─╯ 
+REPOSITORY   TAG       IMAGE ID       CREATED        SIZE 
+mysql        latest    fe893ca74649   4 days ago     592MB 
+nginx        latest    c42efe0b5438   4 days ago     135MB 
+mongo        latest    9e4a59e38e8e   4 days ago     624MB 
+redis        latest    9f54e28e6763   5 days ago     111MB 
+postgres     latest    38da3d5fc5bf   5 days ago     360MB 
+rabbitmq     latest    3e8a61f344e8   2 weeks ago    235MB 
+alpine/git   latest    9793ee61fc75   6 months ago   43.4MB 
+ 
+╭─ ~ ▓▒░·········································································································································░▒▓ ✔  at 11:59:15 PM ─╮ 
+╰─ docker container prune                                                                                                                                                 ─╯ 
+WARNING! This will remove all stopped containers. 
+Are you sure you want to continue? [y/N] y 
+Deleted Containers: 
+0d0c75dbb9b59202fac3c75d10554ff3fb5c0ccabecfc4918612f3e73a01df93 
+b7f7acfa690f63ad651a432bf8eb9c70d4216d1b73120a32006dc15be43a34c5 
+ 
+Total reclaimed space: 0B 
+ 
+╭─ ~ ▓▒░·········································································································································░▒▓ ✔  at 11:59:49 PM ─╮ 
+╰─ docker rmi $(docker images -q)                                                                                                                                         ─╯ 
+Untagged: mysql:latest 
+Untagged: mysql@sha256:d6164ff4855b9b3f2c7748c6ec564ccff841f79a7023db0f9293143481a44b6e 
+Deleted: sha256:fe893ca746498cfd79df295cdce9199635e9d572805e85f36293170323f5ebdb 
+Deleted: sha256:6c878bac26230c52bfab75c0361ddb88268701bb92905143c938c84e255efec7 
+Deleted: sha256:c3b559173b7a95a02c14f808b29f7b24c0622f2abfb883bdc1250e199a110331 
+Deleted: sha256:b65d1550bd4830e43f20da70ca3959e88ebe35f6d901f59905f204e48666fc1b 
+Deleted: sha256:948f10e3e256304bacdc80a3dbbf7b66aaaece7a29dbbcf93484f85a9b5db2d9 
+Deleted: sha256:b6c06075729fb40c47ce1d46a29e6908a1c29ff3d17e92c68e9593a08e427bf4 
+Deleted: sha256:8b752c0688e786b4ff8b21adf579f6b1b05038dd2a8a43386c5821069f54401e 
+Deleted: sha256:96c4e7ebe77608470b0761b5e40d943cf41e1979be6ddb8074691b169b339ed7 
+Deleted: sha256:4c4f7573c892954b6a9719873418db7043dc415ae4ec03386dfd4c31a38ab7bf 
+Deleted: sha256:3ae47ec9a946724d32d6c50dab3c99e136e2418bf79029efe20101f82f4651b4 
+Deleted: sha256:98ae18ea0009347b59fdaf738c909ecc2967edab704034d5348c5cc5977da089 
+Deleted: sha256:cc02d575992fe3ca25590bbda1a1bf7fd424dca0e3d0e13ccb37fa1938fc128b 
+Untagged: nginx:latest 
+Untagged: nginx@sha256:af296b188c7b7df99ba960ca614439c99cb7cf252ed7bbc23e90cfda59092305 
+Deleted: sha256:c42efe0b54387756e68d167a437aef21451f63eebd9330bb555367d67128386c 
+Deleted: sha256:5245eebefbb344b9bb3b2dfeb53dd58487359a95b890bb5f4ebc9d26fe868231 
+Deleted: sha256:762e90b4438295f4b84bb739bb7916e3a2aec922196302a1918cdefeff8f9ac6 
+Deleted: sha256:eee8bba6a8d996dfdc8636e98245bf311a57feb3358e25d74a2b5a04a1059a0b 
+Deleted: sha256:dd57155a3027bd79c0847ffe4789873d1cc55b73f9ed99a4a0e0da4e760094ff 
+Deleted: sha256:7e020809edee125c4e39534d90491c9e828dbb04f7f6255b48cd5c2b4d845765 
+Untagged: mongo:latest 
+Untagged: mongo@sha256:695cc4d237d158d32d5ddcadefe06444dbbd5feac2d50f560b60b70f2198c16c 
+Deleted: sha256:9e4a59e38e8e780359e5d862cbaad924f94eff768314f360137e8025c5541b00 
+Deleted: sha256:ec012c9293fdcebbdc9f5a81df726fda256e97c966792b02cab54e46a37959e3 
+Deleted: sha256:be320f029571edb25cb729777f63148a4c3df3326a96282434b590ccf354087e 
+Deleted: sha256:ff7e2cf8dbd5ccba722d5153659af7184a2404c796fd55db99ca674997f66aad 
+Deleted: sha256:06cb9194723d2a0aae2208b3ef413e7b708e0d86003385d788e23ac4ca1ce984 
+Deleted: sha256:2e36b235595e3e74115cb5ec8761fd933f31799acc097880f179242eb061edaa 
+Deleted: sha256:34348cf438c31e5121034c49873e879d8b4b556a1692298ad6b837a2185400fd 
+Deleted: sha256:840b2cb10937d3a02d80cb97137f623d26e27cec1e0298b2f4d978168a6fd4f9 
+Deleted: sha256:aab2f631bd4043b835a3c814ccf30d29e13d39cdfa72b96ce34f4e035932c0da 
+Deleted: sha256:b49483f6a0e69237cf32ba9fe9171f66eb70c00307ec3f3075564c10349774c3 
+Untagged: redis:latest 
+Untagged: redis@sha256:f9724694a0b97288d2255ff2b69642dfba7f34c8e41aaf0a59d33d10d8a42687 
+Deleted: sha256:9f54e28e6763af20cbe83f3a49a812a93e609c185f0111c41dbc644679e56067 
+Deleted: sha256:1e15be3ceb6843fa9a3abfab4970bfbb8111c6e67824279c2fb5944506a26e12 
+Deleted: sha256:c9e1ca981799beae6108ac057e9fcc730d69618e321983928f629723f1c1dcb0 
+Deleted: sha256:0668155385534b52b39ae1a0bd9f51945dd97ad69db9c512c28a8d23e2823f54 
+Deleted: sha256:d982a7e32948f9633d20208fefb16d9a9c43e3b65fd72e4e3b429747fd9aa283 
+Deleted: sha256:62ffb44a13d1ec71c5923151538230816805b6690721da4bfec157b985cd5775 
+Untagged: postgres:latest 
+Untagged: postgres@sha256:31c9342603866f29206a06b77c8fed48b3c3f70d710a4be4e8216b134f92d0df 
+Deleted: sha256:38da3d5fc5bf4bbb51217c7a37394941f3b08da4865c4070b2a63f493cc8810b 
+Deleted: sha256:bebc77ad2632d29a2c90314e87a6b0fa06a2853ec63075dabac179c96bed6a74 
+Deleted: sha256:49005a9b4db4e49782fb6ff7c76cfb842c3d64185b1f594b938f12f570e853f1 
+Deleted: sha256:884157898ab1f090f32bd3df1d000a819501440829944fbb59db0363235b54c9 
+Deleted: sha256:5c69ba7aac767117279dd72091786327aaa65d0db085cb5b452b80bac920a387 
+Deleted: sha256:87d17c4f3a4cb4db17cf4bd1a5b00b27462ebf68f192999719b97ef7be5a079c 
+Deleted: sha256:4a13c55fabefcad127501062f9575822f6a68c8fd7f5a3f6f24eadf78aec87ac 
+Deleted: sha256:2df73c80204e264b44e8fde4257b0e0d8cee43ca68cee19e0e6e9b4d0ded1331 
+Deleted: sha256:e9779eb44f7654d8574f00f6237a499da5993554176477bd472616920111ac9d 
+Deleted: sha256:612b07ad2d310e0541d535005adee5870b1ef5d29632700683957c59fdcaff38 
+Deleted: sha256:b96c6128f00a3ca50d7398cfea1e8b80f2e1b4cfaab17270cea6e2041aa7f819 
+Deleted: sha256:9dfbc519c46dbe933b044744b1958da5143aebc953660ec100dde1eda9d979d3 
+Deleted: sha256:e1504d8b51e461e35910dc3e3bbf63f27a7a1714730f6548f316aaa664d2142d 
+Deleted: sha256:13594e6f72105befed183626c2e1c6d7b31d7fc2c0f7e682d7fb5f2a75e5c4a2 
+Untagged: rabbitmq:latest 
+Untagged: rabbitmq@sha256:7f5b38eb260707658db5c98d97726b6fd346230e0bf6be3bae40d0008db77dcd 
+Deleted: sha256:3e8a61f344e8e0de289ded7d0abbb6d6156862f0db023c4cc911612fcdc524e1 
+Deleted: sha256:873ad22f3eef3d4d0bff38bfc60df39bfd492a07d661c0fedd52a6fe081bed4f 
+Deleted: sha256:a59ce99f505385c0f5173e1c7c4da9e7cd983080bc8e6727dd327ee90b1bbbcb 
+Deleted: sha256:7cadb14d08497b596de93c135bb43028d9d3ed8a5a832bb033cdb9de05d6aa40 
+Deleted: sha256:65dfceba22e6a885777e01619d050bcf0f861a216a467cdc803b2825d892a2f9 
+Deleted: sha256:614ea707a10537c5bd306d2ade7489debf3f2bb78c960be57f8f028b756a71be 
+Deleted: sha256:9b1ff275a18943429411cb4016e88567b76a56e99814cdf611d8c4c2989e861a 
+Deleted: sha256:edbbd254d19b1688d2683590931596a160860c0f247bbe4d84fe4f0ebe40b3a8 
+Deleted: sha256:fed8e4fe5cb30e4351529227bb3b33deb15a92b5d80c08eafa799bfef6efd0c5 
+Deleted: sha256:e5fd0e9838ef31672badb9f0ebaeef7ebccb7e722c521779e9f5def1f1e2b40a 
+Deleted: sha256:8b61d2f614344df96d63562c4173c250b8bca5cb4b3b07f4c755d731bd02f647 
+Untagged: alpine/git:latest 
+Untagged: alpine/git@sha256:66b210a97bc07bfd4019826bcd13a488b371a6cbe2630a4b37d23275658bd3f2 
+Deleted: sha256:9793ee61fc75d3ff5ae63f027a9b3393fb8dfea8a1d43ffd2636e471826029b9 
+Deleted: sha256:f02f53c4e51d15b5d026044418a40df407bd916ecedb4a2be5a1564bd86b32bb 
+Deleted: sha256:7255fea4709f0b86ea73e44aa2bf92fccb6e4fd3f9fbb2371826aeebd4800806 
+Deleted: sha256:17bec77d7fdc6988cd96b3051b4ad4d3cd6031b2faf0581468be64aac0acc20b 
+ 
+╭─ ~ ▓▒░·······························································································································░▒▓ ✔  took 3s  at 12:00:06 AM ─╮ 
+╰─ docker ps -as                                                                                                                                                          ─╯ 
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES     SIZE 
+ 
+╭─ ~ ▓▒░·········································································································································░▒▓ ✔  at 12:00:12 AM ─╮ 
+╰─ docker images                                                                                                                                                          ─╯ 
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
