@@ -1,0 +1,22 @@
+Last login: Mon May 29 23:42:09 on ttys007 
+╭─ ~ ▓▒░·························································································································································░▒▓ ✔  at 11:55:30 PM ─╮ 
+╰─ docker run -dit --name devopsdockeruh  --platform linux/amd64 devopsdockeruh/simple-web-service:ubuntu                                                                                 ─╯ 
+63f90b47db7197d37a8a99fe7fb1e4356d93fd22365e2ceb06ca430092b1e5cf 
+ 
+╭─ ~ ▓▒░·························································································································································░▒▓ ✔  at 11:55:53 PM ─╮ 
+╰─ docker exec -it devopsdockeruh bash                                                                                                                                                    ─╯ 
+root@63f90b47db71:/usr/src/app# cat /usr/src/app/text.log 
+2023-05-29 21:55:54 +0000 UTC 
+2023-05-29 21:55:56 +0000 UTC 
+2023-05-29 21:55:58 +0000 UTC 
+2023-05-29 21:56:00 +0000 UTC 
+2023-05-29 21:56:02 +0000 UTC 
+Secret message is: 'You can find the source code here: https://github.com/docker-hy' 
+2023-05-29 21:56:04 +0000 UTC 
+2023-05-29 21:56:06 +0000 UTC 
+2023-05-29 21:56:08 +0000 UTC 
+2023-05-29 21:56:10 +0000 UTC 
+2023-05-29 21:56:12 +0000 UTC 
+Secret message is: 'You can find the source code here: https://github.com/docker-hy' 
+2023-05-29 21:56:14 +0000 UTC 
+root@63f90b47db71:/usr/src/app# 
