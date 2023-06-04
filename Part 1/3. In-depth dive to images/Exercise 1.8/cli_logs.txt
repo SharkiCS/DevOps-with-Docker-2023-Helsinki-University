@@ -1,0 +1,41 @@
+Last login: Sun Jun  4 18:27:01 on ttys000   
+╭─ ~/Desktop/DevOps with Docker ▓▒░·················░▒▓ ✔  at 06:27:04 PM ─╮ 
+╰─ touch Dockerfile                                                          ─╯ 
+ 
+╭─ ~/Desktop/DevOps with Docker ▓▒░·················░▒▓ ✔  at 06:27:08 PM ─╮ 
+╰─ nano Dockerfile                                                           ─╯ 
+ 
+╭─ ~/Desktop/DevOps with Docker ▓▒░·······░▒▓ ✔  took 9s  at 06:27:19 PM ─╮ 
+╰─ ls                                                                        ─╯ 
+Dockerfile 
+ 
+╭─ ~/Desktop/DevOps with Docker ▓▒░·················░▒▓ ✔  at 06:27:25 PM ─╮ 
+╰─ docker build -t web-server .                                              ─╯ 
+failed to fetch metadata: fork/exec /Users/sharki/.docker/cli-plugins/docker-buildx: no such file or directory 
+ 
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release. 
+            Install the buildx component to build images with BuildKit: 
+            https://docs.docker.com/go/buildx/ 
+ 
+Sending build context to Docker daemon  9.216kB 
+Step 1/2 : FROM devopsdockeruh/simple-web-service:alpine 
+ ---> fd312adc88e0 
+Step 2/2 : CMD ["server"] 
+ ---> [Warning] The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested 
+ ---> Running in 9d70f3c0ff54 
+Removing intermediate container 9d70f3c0ff54 
+ ---> a719ec693d29 
+Successfully built a719ec693d29 
+Successfully tagged web-server:latest 
+ 
+╭─ ~/Desktop/DevOps with Docker ▓▒░·················░▒▓ ✔  at 06:27:39 PM ─╮ 
+╰─ docker run web-server                                                     ─╯ 
+WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested 
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached. 
+ 
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production. 
+ - using env:	export GIN_MODE=release 
+ - using code:	gin.SetMode(gin.ReleaseMode) 
+ 
+[GIN-debug] GET    /*path                    --> server.Start.func1 (3 handlers)
+[GIN-debug] Listening and serving HTTP on :8080
