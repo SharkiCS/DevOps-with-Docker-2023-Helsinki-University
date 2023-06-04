@@ -1,0 +1,50 @@
+Last login: Sun Jun  4 16:24:14 on ttys000 
+╭─ ~ ▓▒░·····································································································░▒▓ ✔  at 04:24:48 PM ─╮ 
+╰─ docker pull devopsdockeruh/simple-web-service:ubuntu                                                                               ─╯ 
+ubuntu: Pulling from devopsdockeruh/simple-web-service 
+5d3b2c2d21bb: Pull complete  
+3fc2062ea667: Pull complete  
+75adf526d75b: Pull complete  
+965d4bbb586a: Pull complete  
+4f4fb700ef54: Pull complete  
+Digest: sha256:d44e1dce398732e18c7c2bad9416a072f719af33498302b02929d4c112e88d2a 
+Status: Downloaded newer image for devopsdockeruh/simple-web-service:ubuntu 
+docker.io/devopsdockeruh/simple-web-service:ubuntu 
+ 
+╭─ ~ ▓▒░···························································································░▒▓ ✔  took 5s  at 04:25:25 PM ─╮ 
+╰─ docker pull devopsdockeruh/simple-web-service:alpine                                                                               ─╯ 
+alpine: Pulling from devopsdockeruh/simple-web-service 
+ba3557a56b15: Pull complete  
+1dace236434b: Pull complete  
+4f4fb700ef54: Pull complete  
+Digest: sha256:dd4d367476f86b7d7579d3379fe446ae5dfce25480903fb0966fc2e5257e0543 
+Status: Downloaded newer image for devopsdockeruh/simple-web-service:alpine 
+docker.io/devopsdockeruh/simple-web-service:alpine 
+ 
+╭─ ~ ▓▒░···························································································░▒▓ ✔  took 3s  at 04:25:31 PM ─╮ 
+╰─ docker images                                                                                                                      ─╯ 
+REPOSITORY                          TAG       IMAGE ID       CREATED       SIZE 
+devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   2 years ago   83MB 
+devopsdockeruh/simple-web-service   alpine    fd312adc88e0   2 years ago   15.7MB 
+ 
+╭─ ~ ▓▒░·································································································░▒▓ 125 ✘  at 04:44:26 PM ─╮ 
+╰─ docker run -dit --name devopsdockeruh devopsdockeruh/simple-web-service:alpine                                                     ─╯ 
+79563932a7234920fd942b9b6d7e4814f76b421dc7383083407b78acd92a3084 
+ 
+╭─ ~ ▓▒░·····································································································░▒▓ ✔  at 04:44:34 PM ─╮ 
+╰─ docker exec -it devopsdockeruh /bin/sh                                                                                             ─╯ 
+/usr/src/app # cat /usr/src/app/text.log 
+2023-06-04 14:44:34 +0000 UTC 
+2023-06-04 14:44:36 +0000 UTC 
+2023-06-04 14:44:38 +0000 UTC 
+2023-06-04 14:44:40 +0000 UTC 
+2023-06-04 14:44:42 +0000 UTC 
+Secret message is: 'You can find the source code here: https://github.com/docker-hy' 
+2023-06-04 14:44:44 +0000 UTC 
+2023-06-04 14:44:46 +0000 UTC 
+2023-06-04 14:44:48 +0000 UTC 
+2023-06-04 14:44:50 +0000 UTC 
+2023-06-04 14:44:52 +0000 UTC 
+Secret message is: 'You can find the source code here: https://github.com/docker-hy' 
+2023-06-04 14:44:54 +0000 UTC 
+/usr/src/app #
