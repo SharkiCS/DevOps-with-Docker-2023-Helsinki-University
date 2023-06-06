@@ -1,0 +1,22 @@
+Last login: Tue Jun  6 03:33:56 on ttys000 
+╭─ ~/Desktop/DevOps with Docker/logs ▓▒░············░▒▓ ✔  at 03:34:02 PM ─╮ 
+╰─ touch text.log                                                            ─╯ 
+ 
+╭─ ~/Desktop/DevOps with Docker/logs ▓▒░············░▒▓ ✔  at 03:34:17 PM ─╮ 
+╰─ docker run -v "$(pwd)/text.log:/usr/src/app/text.log" devopsdockeruh/simple-web-service 
+WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested 
+Starting log output 
+Wrote text to /usr/src/app/text.log 
+Wrote text to /usr/src/app/text.log 
+Wrote text to /usr/src/app/text.log 
+^C%                                                                           
+ 
+╭─ ~/Des/DevOps with Docker/logs ▓▒░··░▒▓ INT ✘  took 6s  at 03:34:26 PM ─╮ 
+╰─ ls                                                                        ─╯ 
+text.log 
+ 
+╭─ ~/Desktop/DevOps with Docker/logs ▓▒░············░▒▓ ✔  at 03:34:31 PM ─╮ 
+╰─ cat text.log                                                              ─╯ 
+2023-06-06 13:34:21 +0000 UTC 
+2023-06-06 13:34:23 +0000 UTC 
+2023-06-06 13:34:25 +0000 UTC
