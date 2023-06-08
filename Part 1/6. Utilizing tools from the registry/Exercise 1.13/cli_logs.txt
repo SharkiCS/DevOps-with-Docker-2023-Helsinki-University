@@ -1,0 +1,88 @@
+Last login: Thu Jun  8 00:24:05 on ttys000 
+╭─ ~/Des/DevOps /exercise1.13 ▓▒░········░▒▓ ✔  took 20s  at 02:06:19 AM ─╮ 
+╰─ docker build -t exercise1.13 .                                            ─╯ 
+failed to fetch metadata: fork/exec /Users/sharki/.docker/cli-plugins/docker-buildx: no such file or directory 
+ 
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release. 
+            Install the buildx component to build images with BuildKit: 
+            https://docs.docker.com/go/buildx/ 
+ 
+Sending build context to Docker daemon  53.25kB 
+Step 1/9 : FROM golang:1.16 
+ ---> ee419a0749d8 
+Step 2/9 : WORKDIR /usr/src/app 
+ ---> Using cache 
+ ---> 23c8c6774f58 
+Step 3/9 : EXPOSE 8080 
+ ---> Using cache 
+ ---> c8482a4a8911 
+Step 4/9 : COPY ./example-backend/ /usr/src/app/ 
+ ---> Using cache 
+ ---> e48526fa717c 
+Step 5/9 : ENV REQUEST_ORIGIN=http://127.0.0.1:5001 
+ ---> Running in 81efb95ff2b2 
+Removing intermediate container 81efb95ff2b2 
+ ---> a0440929fcd4 
+Step 6/9 : RUN go build 
+ ---> Running in 11a516972329 
+go: downloading github.com/gin-contrib/cors v1.3.1 
+go: downloading github.com/gin-gonic/gin v1.6.3 
+go: downloading github.com/go-redis/redis/v8 v8.4.2 
+go: downloading github.com/go-pg/pg/v10 v10.7.3 
+go: downloading github.com/cespare/xxhash/v2 v2.1.1 
+go: downloading github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f 
+go: downloading go.opentelemetry.io/otel v0.14.0 
+go: downloading github.com/gin-contrib/sse v0.1.0 
+go: downloading github.com/mattn/go-isatty v0.0.12 
+go: downloading mellium.im/sasl v0.2.1 
+go: downloading github.com/go-pg/zerochecker v0.2.0 
+go: downloading github.com/jinzhu/inflection v1.0.0 
+go: downloading github.com/vmihailenco/msgpack/v5 v5.0.0 
+go: downloading github.com/vmihailenco/tagparser v0.1.2 
+go: downloading github.com/go-playground/validator/v10 v10.2.0 
+go: downloading github.com/golang/protobuf v1.4.3 
+go: downloading github.com/ugorji/go v1.1.7 
+go: downloading gopkg.in/yaml.v2 v2.3.0 
+go: downloading github.com/ugorji/go/codec v1.1.7 
+go: downloading golang.org/x/sys v0.0.0-20201119102817-f84b799fce68 
+go: downloading github.com/tmthrgd/go-hex v0.0.0-20190904060850-447a3041c3bc 
+go: downloading github.com/vmihailenco/bufpool v0.1.11 
+go: downloading golang.org/x/crypto v0.0.0-20201117144127-c1f2f97bffc9 
+go: downloading github.com/go-playground/universal-translator v0.17.0 
+go: downloading github.com/leodido/go-urn v1.2.0 
+go: downloading google.golang.org/protobuf v1.25.0 
+go: downloading github.com/go-playground/locales v0.13.0 
+Removing intermediate container 11a516972329 
+ ---> 9cc84e99eb77 
+Step 7/9 : RUN chmod +x server 
+ ---> Running in 3aeefc673667 
+Removing intermediate container 3aeefc673667 
+ ---> f00b035ac87d 
+Step 8/9 : ENTRYPOINT ["./server"] 
+ ---> Running in 5d95debee8a1 
+Removing intermediate container 5d95debee8a1 
+ ---> 29a412e9f5de 
+Step 9/9 : CMD ["./server"] 
+ ---> Running in 70ddba2badbc 
+Removing intermediate container 70ddba2badbc 
+ ---> 23165511af23 
+Successfully built 23165511af23 
+Successfully tagged exercise1.13:latest 
+ 
+╭─ ~/Des/DevOps /exercise1.13 ▓▒░········░▒▓ ✔  took 11s  at 02:08:42 AM ─╮ 
+╰─ docker run -p 127.0.0.1:8080:8080 exercise1.13                            ─╯ 
+[Ex 2.4+] REDIS_HOST env was not passed so redis connection is not initialized 
+[Ex 2.6+] POSTGRES_HOST env was not passed so postgres connection is not initialized 
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached. 
+ 
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production. 
+ - using env:	export GIN_MODE=release 
+ - using code:	gin.SetMode(gin.ReleaseMode) 
+ 
+[GIN-debug] GET    /ping                     --> server/router.pingpong (4 handlers) 
+[GIN-debug] GET    /messages                 --> server/controller.GetMessages (4 handlers) 
+[GIN-debug] POST   /messages                 --> server/controller.CreateMessage (4 handlers) 
+[GIN-debug] Listening and serving HTTP on :8080 
+[GIN] 2023/06/08 - 00:08:57 | 200 |     698.125µs |      172.17.0.1 | GET      "/ping" 
+[GIN] 2023/06/08 - 00:08:58 | 200 |      64.958µs |      172.17.0.1 | GET      "/ping" 
+[GIN] 2023/06/08 - 00:08:59 | 200 |      66.667µs |      172.17.0.1 | GET      "/ping"
