@@ -1,0 +1,47 @@
+Last login: Sat Jun 10 17:08:09 on ttys000 
+╭─ ~/Desktop/DevOps with Docker/exercise1.15 ▓▒░································░▒▓ ✔  took 1m 1s  at 05:55:48 PM ─╮ 
+╰─ Docker build -t hellodocker .                                                                                      ─╯ 
+failed to fetch metadata: fork/exec /Users/sharki/.docker/cli-plugins/docker-buildx: no such file or directory 
+ 
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release. 
+            Install the buildx component to build images with BuildKit: 
+            https://docs.docker.com/go/buildx/ 
+ 
+Sending build context to Docker daemon  3.072kB 
+Step 1/4 : FROM python:3.9 
+ ---> 2ab97333e692 
+Step 2/4 : RUN git clone https://github.com/SharkiCS/HelloDocker 
+ ---> Using cache 
+ ---> 519c2cbbf908 
+Step 3/4 : WORKDIR HelloDocker 
+ ---> Running in c2cea5ba4578 
+Removing intermediate container c2cea5ba4578 
+ ---> eeb93e782626 
+Step 4/4 : CMD ["python", "hellodocker.py"] 
+ ---> Running in 24397179c336 
+Removing intermediate container 24397179c336 
+ ---> 8b9e3b176ed1 
+Successfully built 8b9e3b176ed1 
+Successfully tagged hellodocker:latest 
+ 
+╭─ ~/Desktop/DevOps with Docker/exercise1.15 ▓▒░·············································░▒▓ ✔  at 05:55:51 PM ─╮ 
+╰─ docker run hellodocker                                                                                             ─╯ 
+Hello Docker! 
+ 
+╭─ ~/Desktop/DevOps with Docker/exercise1.15 ▓▒░·············································░▒▓ ✔  at 05:55:56 PM ─╮ 
+╰─ docker tag hellodocker 0sharki/hellodocker                                                                         ─╯ 
+ 
+╭─ ~/Desktop/DevOps with Docker/exercise1.15 ▓▒░···········································░▒▓ 1 ✘  at 05:56:22 PM ─╮ 
+╰─ docker push 0sharki/hellodocker                                                                                    ─╯ 
+Using default tag: latest 
+The push refers to repository [docker.io/0sharki/hellodocker] 
+635f98a12fd1: Pushed  
+a75d36e3d4a9: Layer already exists  
+5325815ba51c: Layer already exists  
+de73604628f0: Layer already exists  
+09f95e0cd33c: Layer already exists  
+d11b7e30e28a: Layer already exists  
+737e3d34f974: Layer already exists  
+5db8071bd6c0: Layer already exists  
+67974f604d8a: Layer already exists  
+latest: digest: sha256:6ed574a1830884c5f25e9c1dc2b737bbbdac9810c8efcca785f71ee821663965 size: 2216
