@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 
 EXPOSE 5001
 
-COPY ./example-frontend/ /usr/src/app/
+COPY ./example-frontend/ .
 
 RUN npm install
 RUN npm run build
