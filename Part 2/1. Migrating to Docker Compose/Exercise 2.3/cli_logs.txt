@@ -1,0 +1,43 @@
+Last login: Sun Jun 11 22:41:16 on ttys004 
+╭─ ~/Des/DevOps-with-Docker-2023-Helsinki-University/Part 2/1/Exercise 2.3  on main ?1 ▓▒░·░▒▓ ✔  at 10:51:27 PM ─╮ 
+╰─ docker-compose up                                                                                                 ─╯ 
+WARNING: Compose V1 is no longer supported and will be removed from Docker Desktop in an upcoming release. See https://docs.docker.com/go/compose-v1-eol/ 
+Recreating backend  ... done 
+Recreating frontend ... done 
+Attaching to backend, frontend 
+backend     | [Ex 2.4+] REDIS_HOST env was not passed so redis connection is not initialized 
+backend     | [Ex 2.6+] POSTGRES_HOST env was not passed so postgres connection is not initialized 
+backend     | [GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached. 
+backend     |  
+backend     | [GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production. 
+backend     |  - using env:	export GIN_MODE=release 
+backend     |  - using code:	gin.SetMode(gin.ReleaseMode) 
+backend     |  
+backend     | [GIN-debug] GET    /ping                     --> server/router.pingpong (4 handlers) 
+backend     | [GIN-debug] GET    /messages                 --> server/controller.GetMessages (4 handlers) 
+backend     | [GIN-debug] POST   /messages                 --> server/controller.CreateMessage (4 handlers) 
+backend     | [GIN-debug] Listening and serving HTTP on :8080 
+frontend    |  INFO  Accepting connections at http://localhost:5001 
+frontend    |  HTTP  6/11/2023 9:02:18 PM 172.20.0.1 GET / 
+frontend    |  HTTP  6/11/2023 9:02:18 PM 172.20.0.1 Returned 304 in 22 ms 
+frontend    |  HTTP  6/11/2023 9:02:18 PM 172.20.0.1 GET /static/css/main.eaa5d75e.chunk.css 
+frontend    |  HTTP  6/11/2023 9:02:18 PM 172.20.0.1 Returned 304 in 3 ms 
+frontend    |  HTTP  6/11/2023 9:02:18 PM 172.20.0.1 GET /static/js/2.43ca3586.chunk.js 
+frontend    |  HTTP  6/11/2023 9:02:18 PM 172.20.0.1 GET /static/js/main.936a688e.chunk.js 
+frontend    |  HTTP  6/11/2023 9:02:18 PM 172.20.0.1 Returned 304 in 4 ms 
+frontend    |  HTTP  6/11/2023 9:02:18 PM 172.20.0.1 Returned 200 in 14 ms 
+frontend    |  HTTP  6/11/2023 9:02:18 PM 172.20.0.1 GET /static/css/main.eaa5d75e.chunk.css.map 
+frontend    |  HTTP  6/11/2023 9:02:18 PM 172.20.0.1 Returned 304 in 2 ms 
+frontend    |  HTTP  6/11/2023 9:02:18 PM 172.20.0.1 GET /static/js/2.43ca3586.chunk.js.map 
+frontend    |  HTTP  6/11/2023 9:02:18 PM 172.20.0.1 GET /static/js/main.936a688e.chunk.js.map 
+frontend    |  HTTP  6/11/2023 9:02:18 PM 172.20.0.1 Returned 304 in 2 ms 
+frontend    |  HTTP  6/11/2023 9:02:18 PM 172.20.0.1 Returned 200 in 13 ms 
+frontend    |  HTTP  6/11/2023 9:02:18 PM 172.20.0.1 GET /static/media/toskalogo.c0f35cf0.svg 
+frontend    |  HTTP  6/11/2023 9:02:18 PM 172.20.0.1 Returned 304 in 2 ms 
+frontend    |  HTTP  6/11/2023 9:02:19 PM 172.20.0.1 GET /manifest.json 
+frontend    |  HTTP  6/11/2023 9:02:19 PM 172.20.0.1 Returned 304 in 3 ms 
+backend     | [GIN] 2023/06/11 - 21:02:20 | 200 |    1.869875ms |      172.20.0.1 | GET      "/ping" 
+^CGracefully stopping... (press Ctrl+C again to force) 
+Stopping backend    ... done 
+Stopping frontend   ...  
+Killing frontend    ... done
