@@ -1,0 +1,29 @@
+╭─ ~/Des/DevOps-with-Docker-2023-Helsinki-University/Part 2/1/Exercise 2.2  on main ?1 ▓▒░······················░▒▓ ✔  at 10:07:26 PM ─╮ 
+╰─ cat docker-compose.yml                                                                                                                 ─╯ 
+version: '3.8' 
+ 
+services: 
+    simple-web-service: 
+        image: devopsdockeruh/simple-web-service 
+        ports:  
+          - 8080:8080 
+        command: ["server"]%                                                                                                                 
+ 
+╭─ ~/Des/DevOps-with-Docker-2023-Helsinki-University/Part 2/1/Exercise 2.2  on main ?1 ▓▒░······················░▒▓ ✔  at 10:07:27 PM ─╮ 
+╰─ docker-compose up                                                                                                                      ─╯ 
+WARNING: Compose V1 is no longer supported and will be removed from Docker Desktop in an upcoming release. See https://docs.docker.com/go/compose-v1-eol/ 
+Creating network "exercise22_default" with the default driver 
+Creating exercise22_simple-web-service_1 ... done 
+Attaching to exercise22_simple-web-service_1 
+simple-web-service_1  | [GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached. 
+simple-web-service_1  |  
+simple-web-service_1  | [GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production. 
+simple-web-service_1  |  - using env:	export GIN_MODE=release 
+simple-web-service_1  |  - using code:	gin.SetMode(gin.ReleaseMode) 
+simple-web-service_1  |  
+simple-web-service_1  | [GIN-debug] GET    /*path                    --> server.Start.func1 (3 handlers) 
+simple-web-service_1  | [GIN-debug] Listening and serving HTTP on :8080 
+simple-web-service_1  | [GIN] 2023/06/11 - 20:07:37 | 200 |       3.993ms |      172.19.0.1 | GET      "/" 
+simple-web-service_1  | [GIN] 2023/06/11 - 20:07:52 | 200 |         302µs |      172.19.0.1 | GET      "/" 
+^CGracefully stopping... (press Ctrl+C again to force) 
+Stopping exercise22_simple-web-service_1 ... done
