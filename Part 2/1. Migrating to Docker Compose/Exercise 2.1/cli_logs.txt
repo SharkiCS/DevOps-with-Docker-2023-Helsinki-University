@@ -1,0 +1,39 @@
+Last login: Sat Jun 10 17:29:42 on ttys005 
+╭─ ~/Desktop/DevOps with Docker/exercise1.3 ▓▒░··································································░▒▓ ✔  at 09:27:06 PM ─╮ 
+╰─ cat docker-compose.yml                                                                                                                 ─╯ 
+version: '3.8' 
+ 
+services: 
+    simple-web-service: 
+        image: devopsdockeruh/simple-web-service 
+        volumes: 
+            - ./text.log:/usr/src/app/text.log                                                       
+ 
+╭─ ~/Desktop/DevOps with Docker/exercise1.3 ▓▒░··································································░▒▓ ✔  at 09:27:09 PM ─╮ 
+╰─ touch text.log                                                                                                                         ─╯ 
+ 
+╭─ ~/Desktop/DevOps with Docker/exercise1.3 ▓▒░··································································░▒▓ ✔  at 09:27:16 PM ─╮ 
+╰─ docker-compose run simple-web-service                                                                                                  ─╯ 
+WARNING: Compose V1 is no longer supported and will be removed from Docker Desktop in an upcoming release. See https://docs.docker.com/go/compose-v1-eol/ 
+Creating exercise13_simple-web-service_run ... done 
+Starting log output 
+Wrote text to /usr/src/app/text.log 
+Wrote text to /usr/src/app/text.log 
+Wrote text to /usr/src/app/text.log 
+Wrote text to /usr/src/app/text.log 
+Wrote text to /usr/src/app/text.log 
+Wrote text to /usr/src/app/text.log 
+Wrote text to /usr/src/app/text.log 
+Wrote text to /usr/src/app/text.log 
+^C
+ 
+╭─ ~/Desktop/DevOps with Docker/exercise1.3 ▓▒░···················································░▒▓ INT ✘  took 13s  at 09:27:35 PM ─╮ 
+╰─ cat text.log                                                                                                                           ─╯ 
+2023-06-11 19:27:22 +0000 UTC 
+2023-06-11 19:27:24 +0000 UTC 
+2023-06-11 19:27:26 +0000 UTC 
+2023-06-11 19:27:28 +0000 UTC 
+2023-06-11 19:27:30 +0000 UTC 
+Secret message is: 'You can find the source code here: https://github.com/docker-hy' 
+2023-06-11 19:27:32 +0000 UTC 
+2023-06-11 19:27:34 +0000 UTC
